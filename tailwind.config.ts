@@ -13,6 +13,8 @@ const config: Config = {
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
+			  'baby-blue': '#ADD8E6', // Hex code for baby blue
+			  'navy-blue': '#000080', // Hex code for navy blue (if needed)
   			card: {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
@@ -57,6 +59,7 @@ const config: Config = {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		}
+		
   	}
   },
   plugins: [require("tailwindcss-animate")],
