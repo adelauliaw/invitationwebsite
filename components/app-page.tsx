@@ -1,29 +1,24 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { Button } from "@/components/ui/button";
-import { CalendarDays, MapPin } from "lucide-react";
+import { useState } from 'react'
+import { Button } from "@/components/ui/button"
+import { CalendarDays, MapPin } from "lucide-react"
 
-export default function Page() {
-  const [currentPage, setCurrentPage] = useState('opening');
-  const [recipientName] = useState('Honored Guest');
+export function Page() {
+  const [currentPage, setCurrentPage] = useState('opening')
+  const [recipientName] = useState('Honored Guest')
 
   const handleOpenInvitation = () => {
-    setCurrentPage('details');
-  };
+    setCurrentPage('details')
+  }
 
   const handleSaveToCalendar = () => {
-    console.log("Saving to calendar...");
-  };
+    console.log("Saving to calendar...")
+  }
 
   const handleOpenMap = () => {
-    window.open("https://goo.gl/maps/your-venue-location", "_blank");
-  };
-
-  // Add a handler function for the Back button
-  const handleBack = () => {
-    setCurrentPage('opening');
-  };
+    window.open("https://goo.gl/maps/your-venue-location", "_blank")
+  }
 
   return (
     <div className="min-h-screen bg-baby-blue text-navy-blue font-serif">
@@ -85,16 +80,8 @@ export default function Page() {
               With all humility, we ask for your presence and blessings on our wedding day.
             </p>
           </footer>
-
-          {/* Add the Back button here */}
-          <Button
-            onClick={handleBack}
-            className="bg-navy-blue text-baby-blue hover:bg-navy-blue/90 mt-8 flex items-center"
-          >
-            Go to Invitation
-          </Button>
         </div>
       )}
     </div>
-  );
+  )
 }
